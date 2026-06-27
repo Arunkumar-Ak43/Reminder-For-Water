@@ -31,8 +31,8 @@ jobs:
           mkdir -p app/src/main/assets
           mv Index.html app/src/main/assets/Index.html
 
-      - name: Build APK
-        run: ./gradlew assembleDebug
+      - name: Build APK using system Gradle
+        run: gradle assembleDebug
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
